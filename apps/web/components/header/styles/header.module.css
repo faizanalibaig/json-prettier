@@ -1,0 +1,25 @@
+/* Header */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+/* quick - prettier: heading */
+.heading {
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+  .header {
+    padding: var(--spacing-lg);
+  }
+
+  .heading {
+    font-size: var(--font-size-sm);
+  }
+}

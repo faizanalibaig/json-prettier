@@ -1,4 +1,5 @@
 import { Header, JsonInput } from '../components';
+import Copy from '../components/copy/Copy';
 
 const style = {
   app: {
@@ -13,6 +14,7 @@ export default function page() {
     <div style={style.app}>
       <Header />
       <JsonInput />
+      <Copy />
     </div>
   );
 }

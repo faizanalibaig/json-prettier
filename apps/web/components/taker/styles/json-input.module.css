@@ -9,3 +9,9 @@
   font-size: 15px;
   padding: var(--spacing-sm) var(--spacing-xl);
 }
+
+@media (max-width: 600px) {
+  .json {
+    padding: var(--spacing-lg);
+  }
+}

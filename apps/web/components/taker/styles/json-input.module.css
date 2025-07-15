@@ -1,0 +1,11 @@
+.json {
+  background-color: #111111;
+  border: none;
+  border-top: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+  flex-grow: 2;
+  outline: none;
+  resize: none;
+  font-size: 15px;
+  padding: var(--spacing-sm) var(--spacing-xl);
+}

@@ -1,9 +1,18 @@
-import { Header } from '../components';
+import { Header, JsonInput } from '../components';
+
+const style = {
+  app: {
+    height: '100dvh' as const,
+    display: 'flex' as const,
+    flexDirection: 'column' as const,
+  },
+};
 
 export default function page() {
   return (
-    <div>
+    <div style={style.app}>
       <Header />
+      <JsonInput />
     </div>
   );
 }

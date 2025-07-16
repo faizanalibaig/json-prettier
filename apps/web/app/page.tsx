@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Header, JsonInput } from '../components';
 import Copy from '../components/copy/Copy';
@@ -11,14 +11,24 @@ interface HandleJsonInput {
 
 export default function page() {
   const [json, setJson] = useState<any>(null);
+  const [validateJson, setValidation] = useState<boolean>(false);
 
   const handleJsonInput: HandleJsonInput = (value) => {
     setJson(value);
   };
 
+  useEffect(() => {
+    try {
+      const parsedJson = JSON.parse(json);
+      setValidation(false);
+    } catch (error) {
+      setValidation(true);
+    }
+  }, [json]);
+
   return (
     <div className={style.app}>
-      <Header />
+      <Header validateJson={validateJson} />
       <JsonInput setJson={handleJsonInput} />
       <Copy json={json} />
     </div>

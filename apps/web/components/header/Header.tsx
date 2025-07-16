@@ -1,10 +1,17 @@
 import { Nav } from '.';
 import style from './styles/header.module.css';
 
-export default function Header() {
+interface HeaderProps {
+  validateJson: boolean;
+}
+
+export default function Header({ validateJson }: HeaderProps) {
   return (
     <header className={style.header}>
-      <h1 className={style.heading}>quick - prettier</h1>
+      <div className={style.headerAndError}>
+        <h1 className={style.heading}>quick - prettier</h1>
+        {validateJson && <span className={style.error}>Invalid Json</span>}
+      </div>
       <Nav />
     </header>
   );

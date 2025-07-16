@@ -14,6 +14,19 @@
   color: var(--text-primary);
 }
 
+/* Error */
+.error {
+  font-size: var(--font-size-sm);
+  margin-left: 10px;
+}
+
+/* heading with error */
+.headerAndError {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 /* Responsive - Mobile */
 @media (max-width: 600px) {
   .header {
@@ -21,6 +34,10 @@
   }
 
   .heading {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base);
+  }
+
+  .headerAndError {
+    gap: 5px;
   }
 }

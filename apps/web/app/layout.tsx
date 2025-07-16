@@ -34,8 +34,8 @@ export default function RootLayout({
         />
         <style>{`
           body { font-family: ${calSans.fontFamily}; }
-          h1, h2, h3, h4, h5, h6, button { font-family: ${calSans.fontFamily}; }
-          p, span, div, input, textarea { font-family: ${dmSans.fontFamily}; }
+          h1, h2, h3, h4, h5, h6, span, button { font-family: ${calSans.fontFamily}; }
+          p, div, input, textarea { font-family: ${dmSans.fontFamily}; }
         `}</style>
       </head>
       <body>

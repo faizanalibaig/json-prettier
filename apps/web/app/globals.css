@@ -5,6 +5,11 @@
   --main-font: 'Cal Sans', sans-serif;
   --secondary-font: 'DM Sans', sans-serif;
 
+  /* Font Size Variables */
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-lg: 16px;
+
   /* Color variables */
   --primary-color: #000000;
   --secondary-color: #dbdbdb;

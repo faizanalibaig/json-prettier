@@ -10,7 +10,6 @@
   padding: var(--spacing-base) var(--spacing-2xl);
   border: none;
   border-radius: 25px;
-  background-color: var(--secondary-color);
   color: var(--primary-color);
   font-size: 16px;
   cursor: pointer;

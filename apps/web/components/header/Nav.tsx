@@ -6,7 +6,7 @@ import style from './styles/nav.module.css';
 export default function Nav() {
   return (
     <nav className={style.nav}>
-      <Link href={process.env.GITHUB_LINK || '/'} target='_blank'>
+      <Link href='/' target='_blank'>
         <FaGithubAlt size={20} />
       </Link>
     </nav>

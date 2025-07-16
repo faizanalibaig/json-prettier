@@ -1,20 +1,26 @@
+'use client';
+import { useState } from 'react';
+
 import { Header, JsonInput } from '../components';
 import Copy from '../components/copy/Copy';
+import style from './page.module.css';
 
-const style = {
-  app: {
-    height: '100dvh' as const,
-    display: 'flex' as const,
-    flexDirection: 'column' as const,
-  },
-};
+interface HandleJsonInput {
+  (value: string): void;
+}
 
 export default function page() {
+  const [json, setJson] = useState<any>(null);
+
+  const handleJsonInput: HandleJsonInput = (value) => {
+    setJson(value);
+  };
+
   return (
-    <div style={style.app}>
+    <div className={style.app}>
       <Header />
-      <JsonInput />
-      <Copy />
+      <JsonInput setJson={handleJsonInput} />
+      <Copy json={json} />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
+import { Analytics } from '@vercel/analytics/next';
+
 const calSans = {
   fontFamily: 'Cal Sans, sans-serif',
   fontWeight: '400',
@@ -36,7 +38,10 @@ export default function RootLayout({
           p, span, div, input, textarea { font-family: ${dmSans.fontFamily}; }
         `}</style>
       </head>
-      <body>{children}</body>
+      <body>
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }

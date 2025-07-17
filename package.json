@@ -20,5 +20,9 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "ace-builds": "^1.43.2",
+    "react-ace": "^14.0.1"
+  }
 }

@@ -10,7 +10,7 @@ interface HandleJsonInput {
 }
 
 export default function page() {
-  const [json, setJson] = useState<any>(null);
+  const [json, setJson] = useState<any>('');
   const [validateJson, setValidation] = useState<boolean>(false);
 
   const handleJsonInput: HandleJsonInput = (value) => {
@@ -20,6 +20,8 @@ export default function page() {
   useEffect(() => {
     try {
       const parsedJson = JSON.parse(json);
+      const prettify = JSON.stringify(parsedJson, null, 2);
+      setJson(prettify);
       setValidation(false);
     } catch (error) {
       setValidation(true);
@@ -29,7 +31,7 @@ export default function page() {
   return (
     <div className={style.app}>
       <Header validateJson={validateJson} />
-      <JsonInput setJson={handleJsonInput} />
+      <JsonInput json={json} setJson={handleJsonInput} />
       <Copy json={json} />
     </div>
   );
